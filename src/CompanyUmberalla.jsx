@@ -38,25 +38,25 @@ const CompanyUmberalla = () => {
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-             Zoomax TV
+             Zoomaax TV
             </a>
             <a
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomax News
+              Zoomaax News
             </a>
             <a
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomax Studio
+              Zoomaax Studio
             </a>
             <a
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomar
+              Zoomaar
             </a>
           </div>
         </div>
