@@ -10,16 +10,16 @@ const LogoSlider = () => {
 
   return (
     <div className="bg-[#0C1A2A] py-10">
-      {/* Heading */}
+     
       <h2 className="text-3xl font-bold text-white text-center mb-8">
         Market Leaders Choose Us
       </h2>
 
-      {/* Logo Slider */}
+     
       <div className="relative overflow-hidden w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
         <div
           className="flex animate-loop-scroll"
-          style={{ width: "200%" }} // Ensure enough space for looping logos
+          style={{ width: "200%" }} 
         >
           {[...logos, ...logos].map((imageUrl, index) => (
             <img

@@ -10,7 +10,7 @@ const Feedback = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 p-40" id="feedback">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 pt-40" id="feedback">
       <div className="max-w-2xl bg-white rounded-lg shadow-lg p-6 md:p-8">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">Feedback</h1>
         <p className="text-gray-700 mb-6">

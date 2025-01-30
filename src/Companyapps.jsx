@@ -18,31 +18,31 @@ const Card = ({ icon, title, description, buttonText }) => {
 const Companyapps = () => {
   const cardData = [
     {
-      icon: "/Zoomaax Tv Logo.jpeg", // Replace with the actual path to the icon
+      icon: "/Zoomaax Tv Logo.jpeg", 
       title: "Zoomaax Tv",
       description:
-        "Our soon-to-launch e-commerce platform, offering a unique shopping experience that combines entertainment and commerce. With a curated selection of products and exclusive deals, Zoomaar is set to become the ultimate shopping destination for entertainment enthusiasts.",
+        "Zoomaax TV is a comprehensive entertainment platform offering a diverse range of content, including serials, series, movies, reality shows, and news. It also features a dedicated live streaming service called Promaax. The platform will be accessible in 190+ countries and support 30+ languages, ensuring a seamless viewing experience for a global audience.",
       buttonText: "Website",
     },
     {
-      icon: "/Zoomaax News.png", // Replace with the actual path to the icon
+      icon: "/Zoomaax News.png", 
       title: "Zoomaax News",
       description:
-        "Our events and production division, delivering exceptional experiences that leave a lasting impact. From live concerts to corporate events, Zoomaax Studios is dedicated to creating unforgettable experiences.",
+        "Zoomaax News is a comprehensive news platform delivering updates across all religions, as well as national and international news. It covers a wide range of categories, including sports, crime, politics, cybersecurity, and entertainment, ensuring timely and reliable information for a global audience.",
       buttonText: "Website",
     },
     {
-        icon: "/Zoomaax Studio.png", // Replace with the actual path to the icon
+        icon: "/Zoomaax Studio.png", 
         title: "Zoomaax Studio",
         description:
-          "Our events and production division, delivering exceptional experiences that leave a lasting impact. From live concerts to corporate events, Zoomaax Studios is dedicated to creating unforgettable experiences.",
+          "Zoomaax Studio is a dynamic platform offering a wide range of services, including film and event production, digital marketing, media PR, brand promotions, and comprehensive pre-to-post production solutions. With a commitment to excellence, we cater to diverse creative and commercial needs, delivering high-quality results across industries.",
         buttonText: "Website",
       },
       {
-        icon: "/Zoomaar.png", // Replace with the actual path to the icon
+        icon: "/Zoomaar.png", 
         title: "Zoomaar",
         description:
-          "Our events and production division, delivering exceptional experiences that leave a lasting impact. From live concerts to corporate events, Zoomaax Studios is dedicated to creating unforgettable experiences.",
+          " ZoomaaR is a dynamic e-commerce platform offering a wide range of clothing, ornaments, and more. It provides a seamless shopping experience with diverse product selections to meet the needs of a global audience.",
         buttonText: "Website",
       },
   ];

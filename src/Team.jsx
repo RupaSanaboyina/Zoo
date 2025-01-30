@@ -11,6 +11,13 @@ const Team = () => {
       image: "/kishore Singh.jpeg",
     },
     {
+      name: "Milan Patnaik",
+      role: "Legal Advisor",
+      description:
+        "Legal Advisor at Zoomster Hub, driving growth, efficiency, and innovation across teams.",
+      image: "/Milan Patnaik.jpeg",
+    },
+    {
       name: "Nensi Gadhiya",
       role: "Creative Head",
       description:
@@ -29,15 +36,9 @@ const Team = () => {
       role: "Developer",
       description:
         "Expert IT developers delivering innovative solutions with quality and efficiency.",
-      image: "/Aniket.JPG",
+      image: "/Aniket.jpeg",
     },
-    {
-      name: "Priya Sharma",
-      role: "Management Head",
-      description:
-        "Management Head at Zoomster Hub, driving growth, efficiency, and innovation across teams.",
-      image: "/Priya.jpeg",
-    },
+   
     {
       name: "Puja Patra",
       role: "Event & Media PRO",
@@ -62,7 +63,7 @@ const Team = () => {
     .concat(members.slice(0, Math.max(0, activeIndex + groupSize - members.length)));
 
   return (
-    <section className="bg-[#0C1A2A] p-10" id="team">
+    <section className="bg-[#0C1A2A] p-10 pt-28" id="team">
       <h2 className="text-3xl text-white font-bold text-center md:text-4xl">
         Meet Our Team
       </h2>
@@ -107,10 +108,10 @@ const Team = () => {
           <a href="#" className="text-blue-500 hover:underline">
             Facebook
           </a>
-          <a href="#" className="text-pink-500 hover:underline">
+          <a href="https://www.instagram.com/zoomsterhubofficial" className="text-pink-500 hover:underline">
             Instagram
           </a>
-          <a href="#" className="text-blue-700 hover:underline">
+          <a href="https://www.facebook.com/officialzoomsterhub" className="text-blue-700 hover:underline">
             LinkedIn
           </a>
         </div>

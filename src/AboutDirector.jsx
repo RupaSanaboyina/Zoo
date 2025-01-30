@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const AboutDirector = () => (
-  <section className="bg-[#0C1A2A] text-white p-10" id="about-director">
+  <section className="bg-[#0C1A2A] text-white pt-20" id="about-director">
     <h2 className="text-2xl font-bold text-center md:text-4xl md:pl-0">
       About Our Director
     </h2>
@@ -15,15 +16,10 @@ const AboutDirector = () => (
       <p className="mt-6 text-center md:text-left md:pl-8 md:mt-0">
         Abinash Rout, CEO of Zoomster Hub, is a visionary leader driving
         innovation and success through technology and creativity. Abinash Rout, a
-        native of Kendujhar, Odisha, is a multifaceted Indian film director{" "}
-        <a
-          href="https://www.google.com/search?q=abinash+rout+director&oq=Abinash&gs_lcrp=EgZjaHJvbWUqBggBECMYJzIJCAAQRRg5GIAEMgYIARAjGCcyBwgCEC4YgAQyCggDEC4YsQMYgAQyDAgEEAAYQxiABBiKBTIHCAUQABiABDIGCAYQRRg8MgYIBxBFGDzSAQg1Nzk2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
-          className="text-blue-400 hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ...
-        </a>
+        native of Kendujhar, Odisha, is a multifaceted Indian film director
+       
+         <Link to="/aboutdirector">...</Link> 
+        
       </p>
     </div>
   </section>

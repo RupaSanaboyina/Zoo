@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ServicesSlider = () => {
   const services = [
@@ -32,19 +32,31 @@ const ServicesSlider = () => {
       text: "We offer end-to-end solutions for pre and post-production, including planning, scripting, casting, filming, editing, sound design, visual effects, and color grading, ensuring high-quality, impactful content creation.",
       id:"PrePro"
     },
-    
-   
     {
       name: "Event & Celebrity Management",
       imageUrl: "https://3.imimg.com/data3/SM/UP/MY-14611198/red3-red_carpet_lights_large_0-500x500.jpg",
       text: "Event and Celebrity Management ensures seamless event execution, strategic planning, and impactful celebrity appearances, enhancing brand visibility, audience engagement, and meaningful connections for memorable and successful experiences.",
       id:"EventManagement"
     },
-   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3; // Number of services per page
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(2);
+      } else {
+        setItemsPerPage(3);
+      }
+    };
+    updateItemsPerPage();
+    window.addEventListener('resize', updateItemsPerPage);
+    return () => window.removeEventListener('resize', updateItemsPerPage);
+  }, []);
 
   const handleNext = () => {
     if (currentIndex + itemsPerPage < services.length) {
@@ -59,42 +71,38 @@ const ServicesSlider = () => {
   };
 
   return (
-    <section id="services" className="py-16 px-8 bg-[#0C1A2A]">
-      <div className='flex-row text-center'>
-        <h2 className="text-3xl font-bold text-white text-center pb-5">Our Services at Zoomster Hub</h2>
+    <section id="services" className="pt-40 px-4  bg-[#0C1A2A]">
+      <div className='text-center'>
+        <h2 className="text-3xl font-bold text-white pb-5">Our Services at Zoomster Hub</h2>
         <p className='text-white'>At Zoomster Hub, we provide AI-powered tools designed to streamline workflows, automate tasks, and boost productivity for your business.<br/> Simplify your operations and achieve effortless growth with our intelligent solutions.</p>
       </div>
       
-      <div className="relative mt-8 flex justify-center items-center">
+      <div className="relative mt-8 flex items-center justify-center">
         <button
           onClick={handlePrev}
-          className="absolute left-0 z-10 p-2 bg-gray-800 text-white rounded-full hover:bg-[#00B6B6]"
+          className="absolute left-2 z-10 p-2 bg-gray-800 text-white rounded-full hover:bg-[#00B6B6]"
         >
           &lt;
         </button>
 
-        <div className="flex items-center justify-center w-full h-90 gap-4">
+        <div className="flex overflow-hidden gap-4 w-full justify-center">
           {services.slice(currentIndex, currentIndex + itemsPerPage).map((service, index) => (
             <div
               key={index}
-              className="w-83 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+              className="w-80 bg-white border border-gray-200 rounded-lg shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105"
             >
-              <a href="#">
               <img
-          className="rounded-t-lg object-cover w-full h-40"
-          src={service.imageUrl}
-          alt={service.name}
-        />
-              </a>
+                className="rounded-t-lg object-cover w-full h-40"
+                src={service.imageUrl}
+                alt={service.name}
+              />
               <div className="p-4">
-                <a href="#">
-                  <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{service.name}</h5>
-                </a>
-                <p className="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">{service.text}</p>
-                <a href={`/${service.id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-custom-cyan rounded-lg hover:bg-[#00B6B6] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <h5 className="mb-2 text-xl font-bold text-gray-900">{service.name}</h5>
+                <p className="mb-3 text-sm text-gray-700">{service.text}</p>
+                <a href={`/${service.id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-custom-cyan rounded-lg hover:bg-[#00B6B6]">
                   Show more
-                  <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                   </svg>
                 </a>
               </div>
@@ -104,7 +112,7 @@ const ServicesSlider = () => {
 
         <button
           onClick={handleNext}
-          className="absolute right-0 z-10 p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700"
+          className="absolute right-2 z-10 p-2 bg-gray-800 text-white rounded-full hover:bg-[#00B6B6]"
         >
           &gt;
         </button>

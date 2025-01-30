@@ -4,7 +4,7 @@ const AddressCards = () => {
   const addresses = [
     {
       title: "Telangana",
-      address: "Gachibowli, Hyderabad, 500032",
+      address: "Miyapur, Hyderabad, 500032",
       bgColor: "bg-blue-100",
     },
     {

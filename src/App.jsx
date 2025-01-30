@@ -31,12 +31,13 @@ import EventManagement from "./EventManagement";
 import Disclaimer from "./Disclaimer";
 import Feedback from "./Feedback";
 import AddressCards from "./AddressCards";
+import AboutDirectorE from "./AboutDirectorE";
 
 const App = () => {
   const [showClientele, setShowClientele] = useState(false);
 
   const handleClienteleClick = () => {
-    setShowClientele(true); // Set the state to show only the clientele component
+    setShowClientele(true); 
   };
 
   return (
@@ -63,6 +64,7 @@ const App = () => {
                 <AboutDirector />
                 <Team />
                 <FAQ />
+               
                 <ContactUs />
                 <AddressCards/>
                 <ContactForm />
@@ -75,7 +77,8 @@ const App = () => {
           <Route exact path="/services" element={<ServicesSlider />} />
           <Route exact path="/team" element={<Team />} />
           <Route exact path="/about-director" element={<AboutDirector />} />
-          <Route exact path="/contact-us" element={<ContactUs />} />
+          <Route exact path="/contact-us" element={<ContactForm />} />
+          <Route exact path="/aboutdirector" element={<AboutDirectorE/>}/>
           <Route
             exact
             path="/terms-and-conditions"

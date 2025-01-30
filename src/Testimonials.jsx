@@ -35,15 +35,17 @@ const FeedbackList = () => {
       date: "November 2009",
       number: 5,
     },
+   
     {
-      profilePic: "https://thumbs.dreamstime.com/b/new-client-14173583.jpg",
-      name: "Jane Doe",
-      username: "JaneDoe123",
+      profilePic: "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
+      name: "edgetelephone",
+      username: "SitePoint Member",
       feedback:
-        "Amazing service! The team was incredibly professional and delivered beyond expectations. I would highly recommend them to anyone seeking top-notch IT solutions!",
-      date: "January 2021",
-      number: 12,
+        "The team exceeded our expectations! They were attentive, professional, and ensured we were satisfied at every stage of the project. Highly recommended!",
+      date: "March 2023",
+      number: 34,
     },
+
     {
       profilePic: "https://superlawyer.in/wp-content/uploads/2023/10/Raghav-DP-2-croped.jpg",
       name: "John Smith",
@@ -54,15 +56,6 @@ const FeedbackList = () => {
       number: 23,
     },
     {
-      profilePic: "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
-      name: "edgetelephone",
-      username: "SitePoint Member",
-      feedback:
-        "The team exceeded our expectations! They were attentive, professional, and ensured we were satisfied at every stage of the project. Highly recommended!",
-      date: "March 2023",
-      number: 34,
-    },
-    {
       profilePic: "https://trueclientpro.com/wp-content/uploads/2022/12/Mayuri-Parikh-True-Client-Pro.jpg",
       name: "M_wb360",
       username: "SitePoint Enthusiast",
@@ -70,6 +63,24 @@ const FeedbackList = () => {
         "Impeccable service and timely delivery! Your attention to detail and willingness to accommodate our requests made this a seamless experience.",
       date: "March 2024",
       number: 21,
+    },
+    {
+      profilePic: "/t.jpeg",
+      name: "Alex Dawson",
+      username: "AlexDawsonUK",
+      feedback:
+        " We received our work on time, and our tarot card website was created beautifully. That's why I enjoy working with Zoomster Hub.",
+      date: "November 2009",
+      number: 5,
+    },
+    {
+      profilePic: "https://thumbs.dreamstime.com/b/new-client-14173583.jpg",
+      name: "Jane Doe",
+      username: "JaneDoe123",
+      feedback:
+        "Amazing service! The team was incredibly professional and delivered beyond expectations. I would highly recommend them to anyone seeking top-notch IT solutions!",
+      date: "January 2021",
+      number: 12,
     },
   ];
 

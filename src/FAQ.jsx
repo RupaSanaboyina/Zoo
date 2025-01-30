@@ -9,7 +9,7 @@ const FAQ = () => (
     <div className="mt-8 space-y-6">
       <details className="mb-4 border-t-2 border-white pt-4">
         <summary
-          className="cursor-pointer font-bold text-lg md:text-xl hover:text-yellow-400 focus:text-yellow-400 transition-colors duration-300"
+          className="cursor-pointer font-bold text-lg md:text-xl hover:text-[#00B6B6] transition-colors duration-300"
           aria-expanded="false"
           aria-controls="faq1"
         >
@@ -21,7 +21,7 @@ const FAQ = () => (
       </details>
       <details className="mb-4 border-t-2 border-white pt-4">
         <summary
-          className="cursor-pointer font-bold text-lg md:text-xl hover:text-yellow-400 focus:text-yellow-400 transition-colors duration-300"
+          className="cursor-pointer font-bold text-lg md:text-xl hover:text-[#00B6B6]  transition-colors duration-300"
           aria-expanded="false"
           aria-controls="faq2"
         >
@@ -33,7 +33,7 @@ const FAQ = () => (
       </details>
       <details className="mb-4 border-t-2 border-white pt-4">
         <summary
-          className="cursor-pointer font-bold text-lg md:text-xl hover:text-yellow-400 focus:text-yellow-400 transition-colors duration-300"
+          className="cursor-pointer font-bold text-lg md:text-xl hover:text-[#00B6B6]  transition-colors duration-300"
           aria-expanded="false"
           aria-controls="faq3"
         >
@@ -45,7 +45,7 @@ const FAQ = () => (
       </details>
       <details className="mb-4 border-t-2 border-white pt-4">
         <summary
-          className="cursor-pointer font-bold text-lg md:text-xl hover:text-yellow-400 focus:text-yellow-400 transition-colors duration-300"
+          className="cursor-pointer font-bold text-lg md:text-xl hover:text-[#00B6B6]  transition-colors duration-300"
           aria-expanded="false"
           aria-controls="faq4"
         >
@@ -57,7 +57,7 @@ const FAQ = () => (
       </details>
       <details className="mb-4 border-t-2 border-white pt-4">
         <summary
-          className="cursor-pointer font-bold text-lg md:text-xl hover:text-yellow-400 focus:text-yellow-400 transition-colors duration-300"
+          className="cursor-pointer font-bold text-lg md:text-xl hover:text-[#00B6B6] "
           aria-expanded="false"
           aria-controls="faq5"
         >
@@ -69,7 +69,7 @@ const FAQ = () => (
       </details>
       <details className="mb-4 border-t-2 border-white pt-4">
         <summary
-          className="cursor-pointer font-bold text-lg md:text-xl hover:text-yellow-400 focus:text-yellow-400 transition-colors duration-300"
+          className="cursor-pointer font-bold text-lg md:text-xl hover:text-[#00B6B6]  transition-colors duration-300"
           aria-expanded="false"
           aria-controls="faq6"
         >

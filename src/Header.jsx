@@ -1,32 +1,35 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CompanyUmberalla from './CompanyUmberalla';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+  const isClientelePage = location.pathname === "/clientele" || location.pathname === "/privacy-policy" || location.pathname==="/terms-and-conditions" || location.pathname==="/cookies" || location.pathname==="/disclaimer" || location.pathname==="/feedback";
 
   return (
     <header
       className={`w-full py-4 px-6 sm:px-8 flex justify-between items-center fixed top-0 left-0 z-20 transition-all duration-300 drop-shadow-lg ${
-        isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'
+        isClientelePage
+          ? 'bg-[#0C1A2A] text-white' 
+          : isScrolled
+          ? 'bg-white text-black'
+          : 'bg-transparent text-white'
       }`}
     >
-      {/* Logo and Title */}
+     
       <div className="flex items-center space-x-4">
         <img
           src="/Z_Logo.png"
@@ -36,32 +39,19 @@ const Header = () => {
         <h1 className="text-xl sm:text-2xl font-bold tracking-wide hidden sm:block">Zoomster Hub</h1>
       </div>
 
-      {/* Hamburger Button */}
+    
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="sm:hidden text-white focus:outline-none"
+        className="sm:hidden focus:outline-none"
       >
-        {/* Custom Hamburger Icon */}
-        <div className={`space-y-2`}>
-          <div
-            className={`w-7 h-1 bg-white transition-transform duration-300 ${
-              isMenuOpen ? 'rotate-45 translate-y-2' : ''
-            }`}
-          />
-          <div
-            className={`w-7 h-1 bg-white transition-opacity duration-300 ${
-              isMenuOpen ? 'opacity-0' : ''
-            }`}
-          />
-          <div
-            className={`w-7 h-1 bg-white transition-transform duration-300 ${
-              isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-            }`}
-          />
+        <div className="space-y-2">
+          <div className={`w-7 h-1 bg-white transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <div className={`w-7 h-1 bg-white transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+          <div className={`w-7 h-1 bg-white transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </div>
       </button>
 
-      {/* Navbar Links */}
+    
       <nav>
         <ul
           className={`${
@@ -70,8 +60,13 @@ const Header = () => {
             isMenuOpen ? 'animate-slide-in' : ''
           }`}
         >
+          <li className={`${isScrolled || isMenuOpen ? 'text-black' : 'text-white'} hover:text-gray-500 transition-opacity duration-500`}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={`${isScrolled || isMenuOpen ? 'text-black' : 'text-white'} hover:text-gray-500 transition-opacity duration-500`}>
+            <CompanyUmberalla />
+          </li>
           {[
-            { to: '/', label: 'Home' },
             { to: '/services', label: 'Our Services' },
             { to: '/clientele', label: 'Our Clients' },
             { to: '/team', label: 'Our Team' },
@@ -87,13 +82,6 @@ const Header = () => {
               <Link to={item.to}>{item.label}</Link>
             </li>
           ))}
-          <li
-            className={`${
-              isScrolled || isMenuOpen ? 'text-black' : 'text-white'
-            } hover:text-gray-500 transition-opacity duration-500`}
-          >
-            <CompanyUmberalla />
-          </li>
         </ul>
       </nav>
     </header>
