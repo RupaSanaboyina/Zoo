@@ -56,7 +56,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-[#0C1A2A] from-gray-900 to-purple-900 text-white p-20 sm:p-10 flex flex-col justify-center" id="contact-us">
+    <section className="bg-[#0C1A2A] from-gray-900 to-purple-900 text-white sm:pt-10 flex flex-col justify-center  pt-20" style={{ paddingTop: "10rem",  paddingBottom: "10rem"}}id="contact-us">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center sm:text-left">
           Get in Touch
@@ -114,7 +114,7 @@ const ContactForm = () => {
           ></textarea>
           <button
             type="submit"
-            className="col-span-1 md:col-span-2 bg-purple-600 py-2 rounded text-white font-semibold hover:bg-purple-700 transition-all duration-300"
+            className="col-span-1 md:col-span-2 bg-[#00B6B6] py-2 rounded text-white font-semibold hover:bg-[#008C8C8C] transition-all duration-300"
           >
             Submit
           </button>

@@ -32,6 +32,8 @@ import Disclaimer from "./Disclaimer";
 import Feedback from "./Feedback";
 import AddressCards from "./AddressCards";
 import AboutDirectorE from "./AboutDirectorE";
+import Rupa from "./Rupa"
+
 
 const App = () => {
   const [showClientele, setShowClientele] = useState(false);
@@ -53,6 +55,7 @@ const App = () => {
             element={
               <>
                 <HeroBanner />
+                <Rupa/>
                 <Companyapps />
                 <LogoSlider />
                 <ServicesSlider />
@@ -64,6 +67,7 @@ const App = () => {
                 <AboutDirector />
                 <Team />
                 <FAQ />
+               
                
                 <ContactUs />
                 <AddressCards/>

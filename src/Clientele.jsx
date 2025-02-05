@@ -2,22 +2,22 @@ import React from "react";
 
 const Clientele = () => {
   const clients = [
-    { id: 1, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeLTfHpyOzovAFp8opAFd2nRKRaTt09HcpOQ&s", alt: "Disney+ Hotstar" },
-    { id: 2, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCLCNFVWMuVjFQzMDLKlY3xXVMO9cFT3FFQ&s", alt: "Star Plus" },
-    { id: 3, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9oaIYY2mGsHSAJpF6ODoF-lXeTNK4m9t6wA&s", alt: "Zee TV" },
-    { id: 4, src: "https://upload.wikimedia.org/wikipedia/commons/4/48/SETindialogo_new.png", alt: "Sony Entertainment" },
-    { id: 5, src: "https://play-lh.googleusercontent.com/_FGpN1UYjPgfL1t3TSybSllUdlzoLTUlLx36UUUpPm8W3-w37SNd1ZNfJbwKzwPyJ3w", alt: "Sony Liv" },
-    { id: 6, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjBserZUlPWk20gmdG5nwvyXHsEP7mqFsDLA&s", alt: "Dangal" },
-    { id: 7, src: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/LifeOK_logo_2011.png/220px-LifeOK_logo_2011.png", alt: "Life OK" },
+    { id: 1, src: "https://play-lh.googleusercontent.com/fTp32YyE-fi7cdG4V6dDR5OCLsx5bRhgMuCQLXroevnHiZWRY72Cxcseb6vlznTEDQ", alt: "MX Player" },
+    { id: 2, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT6ppYvn4kCipfwvI3NG3v4eXyH3EGxtRJnA&s", alt: "Amazon" },
+    { id: 3, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXAundgZyly-yBDY6hOfwfLUesNp64je08NA&s", alt: "Amazon Mini" },
+    { id: 4, src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Aha_OTT_Logo.svg/800px-Aha_OTT_Logo.svg.png", alt: "Aha" },
+    { id: 5, src: "https://play-lh.googleusercontent.com/vcqCewpMTNhNhV2IrGWO-N0DZ-NmQ3RaeAMYoZz65_J8ivwIzsR71HBQ63oQqP9PPNE", alt: "Disney+Hotstar" },
+    { id: 6, src: "https://www.wtevent.com/wpsystem/wp-content/uploads/Hungama-logo-blue.jpg", alt: "Hungama" },
+    { id: 7, src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ-kk6Gw5FoOGGdlfzcQW_-Y2Vc9zVFqWzSw&s", alt: "Dangal" },
     { id: 8, src: "https://upload.wikimedia.org/wikipedia/en/b/b9/Shemaroo_Entertainment_Logo.png", alt: "Shemaroo" },
-    { id: 9, src: "https://img.freepik.com/free-vector/red-logo-play_1034-412.jpg", alt: "Play" },
-    { id: 10, src: "https://t3.ftcdn.net/jpg/05/90/75/40/360_F_590754013_CoFRYEcAmLREfB3k8vjzuyStsDbMAnqC.jpg", alt: "Movie" },
+    { id: 9, src: "/Zoomaax Tv Logo.jpeg", alt: "Zoomaax" },
+    { id: 10, src: "https://seekvectorlogo.com/wp-content/uploads/2018/01/sony-vector-logo.png", alt: "Movie" },
     { id: 11, src: "https://upload.wikimedia.org/wikipedia/commons/8/89/Voot_website_logo.png", alt: "Voot" },
     { id: 12, src: "https://static.vecteezy.com/system/resources/thumbnails/008/573/556/small_2x/vibrant-pink-and-blue-v-letter-logo-concept-creative-minimal-monochrome-monogram-with-lines-and-finger-print-pattern-vector.jpg", alt: "V" },
   ];
 
   return (
-    <section id="clientele">
+    <section id="clientele" className="pt-20 mt-20">
     <div className="py-12 bg-white">
       <h2 className="text-3xl font-bold text-center mb-8">Who We Work With</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto px-4">

@@ -1,22 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const FeedbackCard = ({ profilePic, name, username, feedback, date, number }) => {
   return (
-    <div className="max-w-md mx-auto p-4 border rounded-lg shadow-lg bg-white mb-4 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
-      <div className="flex items-center mb-4">
-        <img
-          src={profilePic}
-          alt={`Profile picture of ${name}`}
-          className="w-10 h-10 rounded-full"
-        />
-        <div className="ml-4">
-          <p className="font-bold text-gray-800">
-            {name} <span className="text-gray-500 font-normal">@{username}</span>
-          </p>
+    <div className="w-80 p-4 border rounded-lg shadow-lg bg-white min-h-[250px] h-[250px] flex flex-col justify-between transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+      <div>
+        <div className="flex items-center mb-4">
+          <img
+            src={profilePic}
+            alt={`Profile picture of ${name}`}
+            className="w-10 h-10 rounded-full"
+          />
+          <div className="ml-4">
+            <p className="font-bold text-gray-800">
+              {name} <span className="text-gray-500 font-normal">@{username}</span>
+            </p>
+          </div>
         </div>
+        <p className="text-gray-700 flex-grow">{feedback}</p>
       </div>
-      <p className="text-gray-700 mb-4">{feedback}</p>
-      <div className="flex justify-between text-sm text-gray-500">
+      <div className="flex justify-between text-sm text-gray-500 mt-4">
         <span>{date}</span>
         <span>#{number}</span>
       </div>
@@ -25,72 +28,137 @@ const FeedbackCard = ({ profilePic, name, username, feedback, date, number }) =>
 };
 
 const FeedbackList = () => {
+  const feedbackRef = useRef(null);
+
   const feedbackData = [
     {
-      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXu--WFtbSiwrAP4VlfNXV4myyv3l1B3y8bw&s",
-      name: "Alex Dawson",
-      username: "AlexDawsonUK",
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIdsCHJQ_ZaQ5gzf89ozMvxF5VqS3MZ35kG9HwYsnDWuDhrpyx9dUaz2upi0Y9VstfilQ&usqp=CAU",
+      name: "Sudhir Mehta",
+      username: "SudhirM",
       feedback:
-        "You could also play with it and make it a bit more fun and friendly (depending on what kind of business you run), I’ve seen stuff like “Our fans”, “Listen to our customers”, “Are we liked?”, all you really need to do is express it in a positive light and state your clients / customers / users are giving out their two cents. 🙂",
-      date: "November 2009",
+        "Professional, efficient, and innovative solutions. Highly recommended for tech needs,Innovative, efficient, and always ahead of technology trends. Highly satisfied.",
+      date: "November 2024",
       number: 5,
     },
-   
     {
-      profilePic: "https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg",
-      name: "edgetelephone",
-      username: "SitePoint Member",
+      profilePic: "https://media.licdn.com/dms/image/v2/D5603AQGN-HSJZjmrvg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1671113249132?e=2147483647&v=beta&t=q0HtYzZv-__CgcpkaGQnABLq2xou-NjKpcSg9gQGu_o",
+      name: "Rahul Dubbey",
+      username: "RahulD",
       feedback:
-        "The team exceeded our expectations! They were attentive, professional, and ensured we were satisfied at every stage of the project. Highly recommended!",
-      date: "March 2023",
+        "Exceptional service, quick responses, and top-notch technical expertise always.",
+      date: "August 2024",
       number: 34,
     },
-
     {
-      profilePic: "https://superlawyer.in/wp-content/uploads/2023/10/Raghav-DP-2-croped.jpg",
-      name: "John Smith",
-      username: "JohnSmith99",
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAuwLxKI2EpVNrWOq0SHZBa771oHATgPm5A&s",
+      name: "Dr Rima ",
+      username: "Rima",
       feedback:
-        "Great experience working with your company. The support was excellent, and the results speak for themselves. Keep up the fantastic work!",
-      date: "February 2023",
+        "Reliable, innovative, and customer-focused. Great results every time,Skilled professionals providing top-tier services with great customer care",
+      date: "September 2024",
       number: 23,
     },
     {
-      profilePic: "https://trueclientpro.com/wp-content/uploads/2022/12/Mayuri-Parikh-True-Client-Pro.jpg",
-      name: "M_wb360",
-      username: "SitePoint Enthusiast",
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5xaYmOOAocOpiUEkEM_80F64cfl8cOMVtA&s",
+      name: "Priyanka Mishra",
+      username: "Priya",
       feedback:
-        "Impeccable service and timely delivery! Your attention to detail and willingness to accommodate our requests made this a seamless experience.",
-      date: "March 2024",
+        "Highly skilled team delivering excellent solutions with outstanding customer service.",
+      date: "August 2024",
       number: 21,
     },
     {
-      profilePic: "/t.jpeg",
-      name: "Alex Dawson",
-      username: "AlexDawsonUK",
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL0ZCKFOydz2RDnrXAEw_3vrjRtXDmP-mol74GCtBBHU3Js9-2N94sZP81LcvRqBk4q9o&usqp=CAU",
+      name: "Surekha Parik",
+      username: "Surekha",
       feedback:
-        " We received our work on time, and our tarot card website was created beautifully. That's why I enjoy working with Zoomster Hub.",
-      date: "November 2009",
+        "Efficient, professional, and tailored IT services. Always exceeds expectations.",
+      date: "October 2024",
       number: 5,
     },
     {
-      profilePic: "https://thumbs.dreamstime.com/b/new-client-14173583.jpg",
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh7u9UivyWFYljI40wcmP-vhphogh3iw4aLJ3guyxgOXFE9a3iOyPyvj3Vq37MTmp_Th0&usqp=CAU",
       name: "Jane Doe",
       username: "JaneDoe123",
       feedback:
-        "Amazing service! The team was incredibly professional and delivered beyond expectations. I would highly recommend them to anyone seeking top-notch IT solutions!",
-      date: "January 2021",
+        "Impressive problem-solving skills and quick implementation of solutions.",
+      date: "January 2025",
       number: 12,
+    },
+    {
+      profilePic: "https://media.licdn.com/dms/image/v2/D4D03AQGpo_Ema-UXmw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731497318019?e=2147483647&v=beta&t=ZzAkzMAMrg8tqKJ3Ftskt8qXjbjU-AHnQEF2beV4wTk",
+      name: "Pragathi Reddy",
+      username: "Pragath",
+      feedback:
+        "We received our work on time,A dependable partner for cutting-edge IT solutions and support services.",
+      date: "December 2025",
+      number: 5,
+    },
+    {
+      profilePic: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXnCXfW3wJCQ_5YHe5XSK8uG1s7gUO9u0yTKPH55OjxD8Ya99p_IgT6bexfZFbL9o6pg&usqp=CAU",
+      name: "Raj Saxena",
+      username: "JRajSaxenaS",
+      feedback:
+        "Amazing service! The team was incredibly professional.Consistent delivery of quality work with strong attention to detail.",
+      date: "February 2025",
+      number: 12,
+    },
+    {
+      profilePic: "https://media.licdn.com/dms/image/v2/D5603AQFawm8P8LG_BA/profile-displayphoto-shrink_400_400/B56ZPug8IYG4Ag-/0/1734873435130?e=2147483647&v=beta&t=51x73FXEI21FECMS7YhOHCrQPUyG2dAu2oGKCS4--K0",
+      name: "Ullas",
+      username: "UllasCR",
+      feedback:
+        "Expert team with exceptional service. Highly recommend for IT needs,Outstanding IT solutions, reliable support, and seamless integration every time.",
+      date: "November 2009",
+      number: 5,
     },
   ];
 
+  useEffect(() => {
+    const list = feedbackRef.current;
+    if (!list) return;
+
+    const clonedItems = [...feedbackData, ...feedbackData, ...feedbackData, ...feedbackData];
+    list.innerHTML = "";
+
+    clonedItems.forEach((item) => {
+      const card = document.createElement("div");
+      card.innerHTML = `<div class="w-80 p-4 border rounded-lg shadow-lg bg-white min-h-[250px] h-[250px] flex flex-col justify-between transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
+        <div>
+          <div class="flex items-center mb-4">
+            <img src="${item.profilePic}" alt="Profile of ${item.name}" class="w-10 h-10 rounded-full" />
+            <div class="ml-4">
+              <p class="font-bold text-gray-800">${item.name} <span class="text-gray-500 font-normal">@${item.username}</span></p>
+            </div>
+          </div>
+          <p class="text-gray-700 flex-grow">${item.feedback}</p>
+        </div>
+        <div class="flex justify-between text-sm text-gray-500 mt-4">
+          <span>${item.date}</span>
+          <span>#${item.number}</span>
+        </div>
+      </div>`;
+      list.appendChild(card);
+    });
+
+    gsap.to(list, {
+      x: "-100%",
+      duration: 25,
+      ease: "linear",
+      repeat: -1,
+      modifiers: {
+        x: gsap.utils.unitize((x) => parseFloat(x) % list.scrollWidth),
+      },
+    });
+  }, []);
+
   return (
     <div className="pt-6 bg-[#0C1A2A] p-6">
-      <h1 className="text-3xl text-center text-white">What users say about Zoomster Hub!</h1>
-      <div className="space-y-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {feedbackData.map((item, index) => (
-          <FeedbackCard key={index} {...item} />
-        ))}
+      <h1 className="text-3xl text-center text-white pb-5">
+        What users say about Zoomster Hub!
+      </h1>
+      <div className="w-full overflow-hidden">
+        <div ref={feedbackRef} className="flex space-x-6 p-4 w-max"></div>
       </div>
     </div>
   );

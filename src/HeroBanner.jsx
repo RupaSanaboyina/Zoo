@@ -12,9 +12,16 @@ const HeroBanner = () => {
           </h1>
         </div>
        
-        <div className="mt-8 flex space-x-4">
-        <p>Zoomster Hub OPC Private Limited is a one-stop solution for entertainment, career growth, <br/>business development, website and application development, pre- to post-production services,<br/> and event or celebrity management. The company offers seamless OTT technology and exclusive <br/>content available in 193 countries. 
-        </p>
+        <div className="text-xl mt-8 flex space-x-4">
+        <p class="inline">
+  Zoomster Hub OPC Private Limited is a one-stop solution for entertainment, <br />
+  career growth,
+  business development, website and application development, <br />pre- to 
+  post-production services, 
+  and event or celebrity management. The <br/>company  offers seamless OTT technology and exclusive 
+  content available <br/>in 193 countries.
+</p>
+
         </div>
       </div>
 

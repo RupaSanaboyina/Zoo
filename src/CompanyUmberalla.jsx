@@ -3,19 +3,16 @@ import React, { useState } from 'react';
 const CompanyUmberalla = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="relative inline-block text-left">
-      <button
-        onClick={toggleDropdown}
-        className="flex"
-      >
+    <div
+      className="relative inline-block text-left"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button className="flex">
         Company Umberella
         <svg
-          className="ml-2 -mr-1 h-5 w-5 text-white "
+          className="ml-2 -mr-1 h-5 w-5 text-white"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -38,25 +35,25 @@ const CompanyUmberalla = () => {
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-             Zoomaax TV
+              Zoomax TV
             </a>
             <a
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomaax News
+              Zoomax News
             </a>
             <a
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomaax Studio
+              Zoomax Studio
             </a>
             <a
               href="#"
               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
             >
-              Zoomaar
+              Zoomar
             </a>
           </div>
         </div>

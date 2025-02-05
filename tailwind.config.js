@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-const withMT = require("@material-tailwind/react/utils/withMT")
+// /** @type {import('tailwindcss').Config} */
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 export default withMT({
   content: [
     "./index.html",
@@ -9,20 +10,19 @@ export default withMT({
   ],
   theme: {
     extend: {
-      colors:{
+      colors: {
         'custom-cyan': '#0C1A2A',
       },
-      animation:{
-        "loop-scroll":"loop-scroll 50s linear infinite"
-      },
-      keyframes:{
-        "loop-scroll":{
-          from:{transform:"translateX(0)"},
-          to:{transform:"translateX(-100%)"},
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
+      },
+      animation: {
+        scroll: "scroll 10s linear infinite",
       },
     },
   },
   plugins: [],
-}
-);
+});

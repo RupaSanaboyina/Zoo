@@ -2,47 +2,70 @@ import React from "react";
 
 const Disclaimer = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 pt-20" id="disclaimer">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 pt-20 mt-20" id="disclaimer">
       <div className="max-w-4xl bg-white rounded-lg shadow-lg p-6 md:p-8">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">Disclaimer</h1>
+        <h1 className="text-2xl font-bold text-gray-800 mb-4">Disclaimer and Terms of Service</h1>
         <p className="text-gray-700 mb-6">
-          These Terms of Service, along with any supplemental terms that may be updated periodically, govern your use of any online or mobile product, service, and subscription like E-Magazine, E-Commerce, Zoom Artist Card, you access through Zoomster Hub (OPC) Private Limited. This includes the services' ability to watch various types of content, as well as create your own, on both Android and iOS devices using your Zoomster Hub Account.
+          These Terms of Service, along with any supplemental terms that may be updated periodically, govern your use of any online or mobile product, service, and subscription offered by Zoomster Hub (OPC) Private Limited. This includes, but is not limited to, services such as E-Magazine, E-Commerce, Zoom Artist Card, and access to various types of content on both Android and iOS devices using your Zoomster Hub Account.
         </p>
         <p className="text-gray-700 mb-6">
-          By agreeing to these terms, you enter into a binding contract with Zoomster Hub (OPC) Private Limited. If additional terms or agreements apply to specific Zoomster Hub (OPC) Private Limited services you use, those will also govern your usage. These Terms of Service, together with the Zoomster Hub (OPC) Private Limited Privacy Policy available at zoomsterhub.com, form a legally binding agreement between you and Zoomster Hub (OPC) Private Limited. By using Zoomster Hub Services, you confirm that you are competent to enter into this agreement. If you are under age, you affirm that you have reviewed these terms with a parent or guardian, who agrees to these terms on your behalf and assumes responsibility for your compliance.
+          By agreeing to these terms, you enter into a legally binding contract with Zoomster Hub (OPC) Private Limited. Additional terms or agreements may apply to specific services offered by Zoomster Hub (OPC) Private Limited, which shall also govern your usage. These Terms of Service, together with the Privacy Policy available at zoomsterhub.com, form a legally binding agreement between you and Zoomster Hub (OPC) Private Limited.
         </p>
         <p className="text-gray-700 mb-6">
-          You agree to periodically review the terms at zoomsterhub.com for any updates, as Zoomster Hub (OPC) Private Limited may modify the Terms of Service at any time. Changes to the terms that impact existing services will become effective 15 days after being posted, while terms for new services will be effective immediately.
+          If you are a minor, you affirm that you have reviewed these terms with a parent or legal guardian who agrees to these terms on your behalf and assumes responsibility for your compliance. You agree to periodically review the terms available at zoomsterhub.com for any updates. Zoomster Hub (OPC) Private Limited reserves the right to modify these Terms of Service at any time. Changes affecting existing services will become effective 15 days after being posted, while terms for new services will be effective immediately.
         </p>
-        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Account Creation & Information:</h2>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">1. Account Creation & Information</h2>
         <p className="text-gray-700 mb-6">
-          You may be required to create an account with a username and password to use our services. During account creation, you may need to provide personal information, such as your name, birth date, email address, and payment information, in accordance with the Zoomster Hub (OPC) Private Limited privacy policy. If you need to update your account, you may be required to provide additional personal or professional details. You agree to provide accurate and complete information and to update it promptly as changes occur. Please note that certain information, such as your user ID number, name, and profile picture, may be publicly visible on the Zoomster Hub website and may be indexed by search engines.
+          To use our services, you may be required to create an account with a username and password. During the account creation process, you may need to provide personal information such as your name, date of birth, email address, and payment information, in accordance with the Zoomster Hub (OPC) Private Limited Privacy Policy.
         </p>
-        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Usage of Username and Password:</h2>
         <p className="text-gray-700 mb-6">
-          Upon creating your account, you will receive a username and password (“Login Information”). The following rules apply to the security of your login information:
+          You agree to provide accurate and complete information and update it promptly if any changes occur. Certain account information, such as your user ID, name, and profile picture, may be publicly visible and indexed by search engines.
         </p>
-        <ul className="list-disc list-inside text-gray-700 mb-6">
-          <li>Zoomster Hub reserves the right to remove or reclaim any usernames at any time and for any reason, including claims by third parties that a username violates their rights.</li>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">2. Usage of Username and Password</h2>
+        <p className="text-gray-700 mb-6">
+          Upon account creation, you will receive a username and password ("Login Information"). You are responsible for maintaining the confidentiality of your login credentials. Zoomster Hub (OPC) Private Limited reserves the right to remove or reclaim usernames at any time for any reason, including third-party claims of infringement.
+        </p>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">3. Ownership & Intellectual Property</h2>
+        <p className="text-gray-700 mb-6">
+          All rights, titles, and interests in the services provided by Zoomster Hub (OPC) Private Limited, including E-Magazine, E-Commerce, Zoom Artist Card, and all subscription-based services, remain the sole property of Zoomster Hub (OPC) Private Limited.
+        </p>
+        <p className="text-gray-700 mb-6">
+          All User-Generated Content (UGC), including forum posts, chat posts, profile content, and other contributions, are owned by Zoomster Hub (OPC) Private Limited, except for third-party content. You acknowledge that:
+        </p>
+        <ul className="list-disc pl-6 mb-6">
+          <li>You do not own your account, and all rights remain with Zoomster Hub (OPC) Private Limited.</li>
+          <li>Virtual items (such as exclusive videos, interviews, digital art, stickers, avatars, status icons, OTT TV access, and other personalized digital assets) are non-transferable and remain the property of Zoomster Hub (OPC) Private Limited.</li>
         </ul>
-        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Ownership:</h2>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">4. Third-Party Content & Contributions</h2>
         <p className="text-gray-700 mb-6">
-          All rights, titles, and interests in the services, including E-Magazine, E-Commerce, Zoom Artist Card, and other subscription services provided by Zoomster Hub (OPC) Private Limited, as well as the Zoomster Hub client and server software, are owned by Zoomster Hub (OPC) Private Limited. All content, except third-party content, is owned by Zoomster Hub (OPC) Private Limited, including User-Generated Content (UGC) such as account personas, forum posts, chat posts, profile content, and any other content contributed by users. Collectively, this content is referred to as “Content.”
+          Zoomster Hub (OPC) Private Limited respects intellectual property rights. You agree that:
         </p>
-        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Accounts:</h2>
+        <ul className="list-disc pl-6 mb-6">
+          <li>You must have legal rights to upload any content to our platform.</li>
+          <li>You must not upload, post, or distribute any content that infringes copyright, trademark, or other intellectual property rights of Zoomster Hub (OPC) Private Limited or any third party.</li>
+          <li>You must not upload any content that violates applicable laws or the privacy rights of others.</li>
+        </ul>
         <p className="text-gray-700 mb-6">
-          You acknowledge that you have no ownership or property interest in your account. All rights to the account are owned by and will remain with Zoomster Hub (OPC) Private Limited.
+          Zoomster Hub (OPC) Private Limited reserves the right to remove content without prior notice if it is deemed infringing or unlawful.
         </p>
-        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Virtual Items:</h2>
+
+        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">5. Stay Connected with Zoomster Hub (OPC) Private Limited</h2>
         <p className="text-gray-700 mb-6">
-          Zoomster Hub (OPC) Private Limited offers virtual items that enhance your experience on the platform. These items include special videos, behind-the-scenes footage, interviews, digital art, emojis, stickers, custom artwork for comments and profiles, unique designs for avatars and profile themes, virtual tickets for live events, concerts, or exclusive screenings, digital items for showing appreciation to creators, status icons, downloadable music tracks, videos, podcasts, interactive elements like polls and quizzes, access to OTT TV platforms, e-magazines, e-commerce offers, and exclusive Zoom Artist Cards. These virtual items provide personalization, exclusivity, and deeper engagement on Zoomster Hub (OPC) Private Limited.
+          Join Zoomster Hub (OPC) Private Limited, where innovation meets creativity and excellence. Explore a dynamic work environment that fosters growth, learning, and success.
         </p>
-        <h2 className="text-xl font-bold text-gray-800 mt-6 mb-4">Contributing Third-Party Content:</h2>
         <p className="text-gray-700 mb-6">
-          Zoomster Hub (OPC) Private Limited respects the intellectual property rights of others. You must have the legal right to upload content to Zoomster Hub (OPC) Private Limited Services. You may not upload or post any content that infringes the copyright, trademark, or other intellectual property rights of Zoomster Hub (OPC) Private Limited or any third party, nor any content that violates the law, these Terms of Service, or any third party’s right of privacy or publicity. You may only upload content that you are permitted to by Zoomster Hub (OPC) Private Limited. Zoomster Hub (OPC) Private Limited may, at its discretion and without prior notice, remove content that infringes on intellectual property or other rights.
+          Follow us on Twitter, Instagram, and Facebook for the latest updates.
         </p>
-        <p className="text-gray-700 mt-6">
-          Join Zoomster Hub (OPC) Private Limited, where innovation meets creativity & excellence. Follow us: Twitter, Instagram, Facebook support@zoomsterhub.com. Discover a dynamic work environment that fosters growth, learning & success. Follow us now.
+        <p className="text-gray-700 mb-6">
+          For inquiries, contact us at: info@zoomsterhub.com
+        </p>
+
+        <p className="text-gray-700 mb-6">
+          These Terms of Service are designed to ensure a safe, compliant, and engaging experience for all users of Zoomster Hub (OPC) Private Limited. By continuing to use our services, you acknowledge and agree to abide by these terms.
         </p>
       </div>
     </div>

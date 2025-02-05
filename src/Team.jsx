@@ -4,19 +4,19 @@ const Team = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const members = [
     {
-      name: "Kishore Singh",
-      role: "Core Committee",
+      name: "Shilpa Parida",
+      role: "Operations Project Coordinator",
       description:
-        "Core committee member driving impactful initiatives at Zoomster Hub.",
-      image: "/kishore Singh.jpeg",
+        "Ensuring that the day-to-day operations run smoothly and efficiently",
+      image: "/Shilpa.jpeg",
     },
-    {
-      name: "Milan Patnaik",
-      role: "Legal Advisor",
-      description:
-        "Legal Advisor at Zoomster Hub, driving growth, efficiency, and innovation across teams.",
-      image: "/Milan Patnaik.jpeg",
-    },
+    // {
+    //   name: "Milan Patnaik",
+    //   role: "Legal Advisor",
+    //   description:
+    //     "Legal Advisor at Zoomster Hub, driving growth, efficiency, and innovation across teams.",
+    //   image: "/Milan Patnaik.jpeg",
+    // },
     {
       name: "Nensi Gadhiya",
       role: "Creative Head",
@@ -105,13 +105,13 @@ const Team = () => {
           businesses and individuals globally.
         </p>
         <div className="flex justify-center space-x-4 mt-4">
-          <a href="#" className="text-blue-500 hover:underline">
+          <a href="https://www.facebook.com/officialzoomsterhub" className="text-blue-500 hover:underline">
             Facebook
           </a>
           <a href="https://www.instagram.com/zoomsterhubofficial" className="text-pink-500 hover:underline">
             Instagram
           </a>
-          <a href="https://www.facebook.com/officialzoomsterhub" className="text-blue-700 hover:underline">
+          <a href="https://www.linkedin.com/company/official-zoomster-hub-opc-private-limited/?viewAsMember=true" className="text-blue-700 hover:underline">
             LinkedIn
           </a>
         </div>

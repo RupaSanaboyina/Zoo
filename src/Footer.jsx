@@ -13,6 +13,16 @@ const Footer = () => {
           <Link to="/disclaimer" className="text-sm hover:text-gray-400 ml-2">Disclaimer</Link> |
           <Link to="/feedback" className="text-sm hover:text-gray-400 ml-2">Feedback</Link>
         </div>
+        <div className="mt-6">
+          <a 
+            href="https://inquiry.zoomsterhub.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-[#00B6B6] hover:bg-[#027D84] text-white  py-2 px-4 rounded-lg inline-block"
+          >
+            Need Our Service? Fill This Form
+          </a>
+        </div>
       </div>
     </footer>
   );
